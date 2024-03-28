@@ -52,5 +52,5 @@ fun calc(){
     val secondNumber = enterNumber("Enter second number: ")
 
     val result = calculating(firstNumber, secondNumber, action)
-    println("Solution: " + result)
+    println("Solution: $result")
 }
