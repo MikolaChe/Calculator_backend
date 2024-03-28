@@ -22,13 +22,18 @@ fun enterNumber(notice: String): Double?{
     print(notice)
     val value = readln()
     if (value.isBlank()) return null
-    return value.toDouble()
+    return try {
+        value.toDouble()
+    } catch (e: NumberFormatException){
+        return null
+    }
 }
 
 fun enterAction(notice: String?): Char?{
     print(notice)
     val value = readln()
     if (value.isBlank()) return null
+
     return value.firstOrNull()
 }
 
